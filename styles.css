@@ -1,0 +1,252 @@
+/***GENERAL STYLING***/
+* {
+    box-sizing: border-box;     /* This prevents padding and margin from creating unwanted width */
+}
+
+body {
+    line-height: 1.6;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #3a3a3a;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/***HEADER STYLING***/
+ 
+.main-header {
+     background-color: #fff;
+     padding: .5em 0 ;
+ }
+
+.name {
+    margin: 0;
+    font-size: 1.25em;
+}
+
+ .name a,
+ .main-nav li a {
+     /* this property and specific target elements set the padding around the logo and menu links - making the link easy to click */
+    display: block;
+    padding: 10px ;
+ }
+
+ .name,
+ .main-nav li {
+     text-align: center;
+     background-color: #fff;
+ }
+ .main-nav li {
+    margin: 10px 0;
+    font-size: .75em;
+ }
+
+
+ .name a {
+    color: black;
+    /* font-size: .75em; */
+}
+
+.main-nav li a {
+    color: rgb(2, 233, 164);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.main-nav li a:hover {
+    color: rgb(1, 71, 80);
+}
+
+/*** BANNER STYLING***/
+
+.banner {
+    background-color: rgb(2, 233, 164) ;
+    margin-bottom: 50px;
+    padding: 3.125em 0 1em;
+    color: #fff;
+    text-align: center;
+}
+
+#logo {
+    width: 150px;
+}
+
+#headline {
+    font-size: 1em;
+}
+
+.tagline {
+    font-size: .75em;
+}
+
+
+/*** MAIN BODY STYLING***/
+.container {
+    padding: 0 1em;
+
+}
+
+/*** FOOTER STYLING***/
+
+.main-footer {
+    background-color: rgb(202, 219, 214);
+    text-align: center;
+    padding: 25px 0;
+    clear: both;
+}
+
+
+/********************************* 
+        MEDIA QUERIES 
+*********************************/
+
+@media screen and (min-width: 769px) {
+
+    /******   HEADER STYLING    ******/
+    body {
+        padding-top: 81px ;
+    }
+    .main-header {
+        position: fixed;
+        /* this fixed-position property set the header elements out of the normal margin and padding of the body - hence the additional padding property of the body */
+        width: 100%;
+        box-shadow: 0 5px 4px rgb(0, 0, 0, .4);
+        top: 0;
+    }
+    .name {
+        font-size: 1.5em;
+    }
+    .main-nav {
+        margin-right: 50px;
+    }
+    .main-nav li {
+        font-size: 1em;
+    }
+
+    .main-nav li a {
+        font-size: 1em;
+    }
+
+    /********* Banner STYLING *******/
+    .banner {
+        padding-bottom: 2em;
+    }
+
+    #logo {
+        width: 300px;
+        /* display: block;
+        margin: 0 auto; */
+    }
+
+    #tagline {
+        font-size: 1.4em;
+    }
+
+    /********* MAIN BODY STYLING *******/
+    .container {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .donut {
+        width: 350px;
+        float: none;
+        margin: 5px 20px 5px ;
+        padding: 10px ;
+        border: 1px solid rgb(2, 233, 164);
+    }
+
+    .col {
+        float: left;
+        margin: 1.5%;
+    }
+
+    .primary-content {
+        width: 44%;
+    }
+    .secondary-content {
+        width: 50%;
+    }
+
+    .tertiary-content {
+        /* width: 30%; */
+    }
+}
+
+@media screen and (min-width: 480px) {
+    
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /********* Main Navigation STYLING *******/
+    
+    .name {
+        /* margin-right: 300px; */
+        float: left;
+    }
+
+    .main-nav {
+        float: right;
+    }
+    .main-nav li {
+        margin-left: 10px;
+        /* margin-right: 10px ; */
+        float: left;
+    }
+
+    .name,
+    .main-nav,
+    .main-nav li {
+        display: inline-block;
+
+    }
+
+    /*****
+    **** Clearing Float STYLING *******/
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /********* Banner STYLING *******/
+
+    #logo {
+        width: 200px;
+        /* display: block;
+        margin: 0 auto; */
+    }
+        
+    #headline {
+        font-size: 1.75em;
+        margin: 0 ;
+    }
+
+    #tagline {
+        margin: 0;
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 85%;
+    }
+    .col {
+        margin: 0 auto;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .secondary-content{
+        width: 40%;
+    }
+    .primary-content,
+    .tertiary-content {
+        width:30%;
+    }
+}
